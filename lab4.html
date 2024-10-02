@@ -22,7 +22,7 @@
             quantity = window.prompt("How many items would you like to order? (1-99)");
             quantity = parseInt(quantity); // string to integer
 
-            if (isNaN(quantity) || quantity < 1 || quantity > 99) {
+            if (quantity < 1 || quantity > 99) {
                 window.alert("Invalid input! Please enter a number between 1 and 99.");
             } else {
                 break;        //  if valid 
@@ -45,13 +45,15 @@
 
         document.writeln("<p>" + name +  " thank you for shopping with us!</p>");
 
-        document.writeln("<p>You ordered " + quantity + " " + item + ".</p>");
+        document.writeln("<p>You ordered " + quantity + " " + item + "(s).</p>");
 
         //delivery date (7 days)
         var presentDate = new Date();
         var deliveryDate = new Date(presentDate);
 
         deliveryDate.setDate(presentDate.getDate() + 7);
+        
+        //displaying delivery data
         document.writeln("<p>Your order will arrive on " + deliveryDate.toDateString() + ".</p>");
     </script>
 </head>
