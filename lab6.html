@@ -39,12 +39,13 @@
     <!-- Button to trigger the API call -->
     <div class="text-center">
       <br> 
-      <button id="GetCatFacts" class="btn btn-primary">Get Cat Facts</button>
+      <button id="GetCatFacts" class="btn btn-primary" onclick = "GetFacts()">Get Cat Facts</button>
     </div>
 
     <div id="demo" class="text-center"></div>
 
   </div>
+  
 
   <script>
     const apiUrl = 'https://brianobruno.github.io/cats.json';
@@ -99,9 +100,6 @@
       // Update the cat photo
       document.getElementById('catImage').src = catPhoto;
     }
-
-    // Function that executes when the button is clicked
-    document.getElementById('GetCatFacts').addEventListener('click', GetFacts);
   </script>
 
 </body>
